@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Cairo:wght@700&family=Epilogue&family=Inter:wght@300&family=Jomhuria&family=Lato&family=Montserrat:wght@500&family=Mukta&family=Mulish&family=Open+Sans:ital,wght@1,300&family=Orbitron&family=Poppins:wght@200&family=Quicksand:wght@300&family=Roboto:wght@100;400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --first: #44b2b3;
+  --second: #a33536;
+  --third: #e7a640;
+  --fourth: #397cba;
+  --title: #4a4c5c;
+  --border-width: 3px;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.6rem;
+  margin-top: 4rem;
+}
+
+header {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+header .head {
+  color: var(--title);
+  font-size: 2.2rem;
+}
+
+header span {
+  color: rgb(155, 154, 154);
+}
+
+header .first-span {
+  font-size: 2.2rem;
+}
+
+header .small-text {
+  font-size: clamp(0.5rem, 100%, 1.2rem);
+  font-weight: bold;
+  color: rgb(161, 159, 159);
+  text-align: center;
+  width: max(250px, 60%);
+  justify-self: center;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(25rem, 35rem));
+  padding: 2rem;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+@media (width < 810px) {
+  main {
+    grid-template-columns: unset;
+  }
+
+  main > * {
+    top: 0 !important;
+    grid-row: unset !important;
+    grid-column: unset !important;
+    min-width: 25rem;
+    width: 100%;
+    max-width: 35rem;
+  }
+}
+
+.container {
+  background-color: white;
+  display: grid;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+  padding: 2.5rem;
+  gap: 1rem;
+}
+
+.title {
+  color: var(--title);
+  font-weight: bold;
+  font-size: 1.8rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+.supervisor {
+  border-top: var(--border-width) solid var(--first);
+  position: relative;
+  top: 55%;
+}
+
+.team-builder {
+  border-top: var(--border-width) solid var(--second);
+}
+
+.karma {
+  border-top: var(--border-width) solid var(--third);
+  grid-column: 2;
+}
+
+.calculator {
+  border-top: var(--border-width) solid var(--fourth);
+  grid-row: 1;
+  grid-column: 3;
+  position: relative;
+  top: 55%;
+}
+
+.team-builder .span {
+  width: 100%;
+}
+
+.span {
+  color: rgb(154, 153, 153);
+  font-size: 1.2rem;
+  width: 90%;
+  line-height: 1.7;
+  font-weight: bold;
+}
+
+img {
+  justify-self: end;
+  width: 4rem;
+  margin-top: 4rem;
+}
